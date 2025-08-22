@@ -1,0 +1,9 @@
+logs
+checkpoints
+results
+__pycache__
+weights
+dataset.h5
+testdataraw
+testdata
+files
