@@ -2,13 +2,14 @@
 ## 摘要
 使用预训练的ResNet50，损失函数使用ArcFace，数据集使用Youtube Faces
 ## 使用导引
-1. 下载[Youtube Faces](https://www.cs.tau.ac.il/~wolf/ytfaces/index.html#download)中的aligned_images_DB.tar.gz并解压，接着在config/settings.py中设置数据集路径，你也可以设置其他参数
-2. 安装依赖
+1. 下载[Youtube Faces](https://www.cs.tau.ac.il/~wolf/ytfaces/index.html#download)中的aligned_images_DB.tar.gz并解压，接着在config/settings.py中设置数据集路径
+2. 下载[dlib 68关键点检测模型](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)并解压，放在files/shape_predictor_68_face_landmarks.dat，你可以在config/settings.py中设置该参数。你也可以设置其他参数。
+3. 安装依赖
    ```bash
    pip install -r requirements.txt
    ```
    注意：如果你有GPU并且想使用CUDA版本的PyTorch，请参考[PyTorch官网](https://pytorch.org/get-started/locally/)安装
-3. 训练模型
+4. 训练模型
    ```bash
    python train.py
    ```
@@ -20,3 +21,5 @@ testdataraw/人名/图片
    ```bash
    python test.py --img /path/to/your/image.*
    ```
+## 许可证
+MIT
