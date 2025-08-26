@@ -1,0 +1,9 @@
+matplotlib
+# 这两项可以下载Cuda版本，pip默认下cpu版本，所以我注释了它们
+# torch
+# torchvision
+numpy
+tqdm
+pillow
+dlib
+h5py

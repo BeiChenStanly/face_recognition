@@ -20,7 +20,7 @@ class FaceTester:
         
         self.extractor = FeatureExtractor(pretrained=False)
         if os.path.exists(weights_path):
-            weights = torch.load(weights_path, map_location='cpu')
+            weights = torch.load(weights_path, map_location=DEVICE)
             self.extractor.load_state_dict(weights)
             print(f"成功加载权重: {weights_path}")
         else:
@@ -142,7 +142,7 @@ class FaceTester:
             print(f"数据库文件不存在: {path}")
             return False
         
-        data = torch.load(path, map_location='cpu', weights_only=False)
+        data = torch.load(path, map_location=DEVICE, weights_only=False)
         
         self.people_database = data['people_database']
         self.label_to_name = data['label_to_name']
